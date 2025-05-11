@@ -4,22 +4,21 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   base:'/vitepress/',
   lang: 'zh-CN',
-  title: "My blog",
- 
+  title: "时迁酱的博客",
   description: "A VitePress Site",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: './' },
-      { text: 'Examples', link: './markdown-examples' }
+      { text: '主页', link: '/' },
+      { text: '文章', link: '/markdown-examples' }
     ],
 
     sidebar: [
       {
         text: '目录',
         items: [
-          { text: 'Markdown Examples', link: './markdown-examples' },
-          { text: 'Runtime API Examples', link: './api-examples' }
+          { text: 'Markdown Examples', link: '/markdown-examples' },
+          { text: 'Runtime API Examples', link: '/api-examples' }
         ]
       }
     ],
