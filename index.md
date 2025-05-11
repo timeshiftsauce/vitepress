@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "My blog"
+  name: "My blog sqj"
   text: "A VitePress Site"
   tagline: My great project tagline
   actions:
@@ -28,7 +28,7 @@ features:
 ## 你哈
 niha + nnn +
   + *a你好*
-  **nnn我**
+  **nnn�*
 
 <style>
 :root {
