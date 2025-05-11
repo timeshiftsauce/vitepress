@@ -1,0 +1,36 @@
+name: Deploy VitePress Site
+
+on:
+  push:
+    branches: [ main ] # 触发分支，根据你的主分支名称修改（可能是 master）
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write # 允许工作流写入仓库内容（用于部署）
+      
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 获取完整提交历史（用于生成最后更新时间）
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # 推荐使用 LTS 版本
+
+      - name: Install dependencies
+        run: npm install # 或者使用 pnpm: npm install -g pnpm && pnpm install
+
+      - name: Build site
+        run: npm run docs:build # 确保你的 package.json 中有这个脚本
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vitepress/dist # 默认构建目录
+          # 如果使用自定义目录结构，请修改这个路径
