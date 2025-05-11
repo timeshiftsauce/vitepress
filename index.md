@@ -3,32 +3,34 @@
 layout: home
 
 hero:
-  name: "My blog sqj"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "时迁酱的Blog"
+  text: "欢迎你来到我的博客"
+  tagline: hello
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 进入
       link: /markdown-examples
     - theme: alt
-      text: API Examples
+      text: 开始api
       link: /api-examples
 
 features:
-  - title: Feature A
+  - title: 功能A
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature B
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title : D
+  - title : 博客
     icon: 😊
+    details: 我的博客
+
     link: https://shiqianjiang.cn
 ---
 ## 你哈
 niha + nnn +
   + *a你好*
-  **nnn�*
+  **nnn�*
 
 <style>
 :root {
