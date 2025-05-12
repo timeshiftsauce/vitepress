@@ -10,7 +10,9 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
-      { text: '文章', link: '/markdown-examples' }
+      { text: '文章', link: '/markdown-examples' },
+      { text: '关于我', link: 'guide/index', activeMatch: '/guide/' },
+      { text: '关于我2', link: '/guide' },
     ],
 
     sidebar: [
@@ -22,7 +24,7 @@ export default defineConfig({
         ]
       }
     ],
-
+  
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
